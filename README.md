@@ -1,6 +1,12 @@
-# RF-DETR Nano: TensorRT Inference Benchmark
+# RF-DETR Nano: GPU-Optimized Object Detection
 
-End-to-end object detection and GPU performance profiling on the NVIDIA Jetson Orin Nano Super 8 GB.
+High-performance transformer-based object detection on NVIDIA Jetson Orin Nano Super, accelerated with TensorRT.
+
+**19.74 FPS end-to-end at 1920 x 1080, with detailed GPU inference and pipeline profiling.**
+
+This implementation measures the full inference pipeline, from video decoding and CUDA memory transfers to TensorRT execution, postprocessing and video encoding.
+
+The benchmark identifies processing bottlenecks and shows how GPU inference latency differs from application throughput.
 
 ## Overview
 
@@ -37,6 +43,14 @@ These are measurements from a completed run, not universal performance guarantee
 6. Render bounding boxes.
 7. Encode the annotated output video.
 8. Collect timing statistics.
+
+## Engineering Highlights
+
+- Transformer-based object detection with RF-DETR Nano.
+- NVIDIA TensorRT execution and CUDA memory management.
+- End-to-end throughput and per-stage latency measurements.
+- Performance analysis at Full HD resolution.
+- Identification of visualization and encoding overhead.
 
 ## Implementation
 
@@ -90,7 +104,3 @@ Measurements represent one video and one hardware configuration.
 Performance depends on power mode, input resolution, engine precision, model configuration, preprocessing and encoding.
 
 The repository does not include a complete model conversion pipeline.
-
-## Project Scope
-
-GPU inference, memory management, model execution, video processing and performance profiling.
