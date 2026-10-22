@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.venv*/
+venv/
+.env
+.env.*
+!.env.example
+
+# Models and checkpoints
+*.pt
+*.pth
+*.onnx
+*.engine
+*.plan
+*.safetensors
+
+# Generated artifacts
+runs/
+output/
+*.log
+*.bak
+
+# Local metadata
+.DS_Store
+.ipynb_checkpoints/
+
+# Generated models and inference media
+models/
+output/
+*.mp4
+*.mov
